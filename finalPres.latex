@@ -93,4 +93,22 @@
   \end{itemize}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%% Aim 1 %%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{What's a pipeline?}
+  \begin{itemize}
+    \item A collection of software to turn raw data into results
+    \pause
+  \end{itemize}
+  \begin{figure}[h]
+    \begin{center}
+      \includegraphics[width=0.7\textwidth]{img/pipelineMaking.png}
+    \end{center}
+    \label{fig:makepipe}
+  \end{figure}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%% Aim 2 %%%%%%%%%%%%%%%%%%%%%%%
+
 \end{document}
