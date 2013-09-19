@@ -1,23 +1,96 @@
 \documentclass{beamer}
 \usepackage{textcomp}
 \usepackage{caption}
-\usepackage[style=authoryear,natbib=true,url=false,isbn=false]{biblatex}
-\addbibresource{<++>.bib}
 \usepackage{listings}
+
+\usepackage{multicol}
+
 
 % Beamer
 \usetheme{default}
 \setbeamertemplate{frametitle}[default][center]
-  % Title page
-  \title{<++>}
-  \author{Kevin Murray}
-  \institute{<++>}
-  \date{\today}
+
+% Title page
+\title{Transcriptome Variation Under Dyanmic Growth Conditions}
+\subtitle{or: How I learned to stop worrying and love RNAseq}
+\author{Kevin Murray}
+\institute{Borevitz Lab}
+\date{\today}
+
 
 \begin{document}
+
 \begin{frame}
   \titlepage
   \vfill
+\end{frame}
+
+
+
+\begin{frame}{Project Overview}
+  \begin{itemize}
+    \item What I've spent my year doing:
+      \pause
+    \item Create \& implement ``dynamic growth conditions''
+      \pause
+    \item Study plant responses under these condtions
+      \pause
+    \item Design \& implement data analysis pipeline
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{The Cazzonelli Button}
+  \begin{columns}[c]
+    \begin{column}[c]{0.5\textwidth}
+      \emph{``Can't there just be a 'do my bioinformatics' button?}
+    \end{column}
+    \begin{column}[c]{0.5\textwidth}
+      \begin{figure}[h]
+        \begin{center}
+          \includegraphics[width=\textwidth]{img/htop.png}
+        \end{center}
+        \label{fig:htop}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}{The growth condition dilemma}
+  \begin{columns}[c]
+    \begin{column}[c]{0.55\textwidth}
+      \begin{figure}[h]
+        \begin{center}
+          \includegraphics[width=0.8\textwidth]{img/celmisia.jpg}
+        \end{center}
+      \end{figure}
+    \end{column}
+    \begin{column}[c]{0.45\textwidth}
+      \begin{itemize}
+        \item Plants grow in nature (mostly)
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \pause
+  \begin{columns}[c]
+    \begin{column}[c]{0.55\textwidth}
+      \begin{figure}[h]
+        \begin{center}
+          \includegraphics[width=0.8\textwidth]{img/normalChamber.jpg}
+        \end{center}
+      \end{figure}
+    \end{column}
+    \begin{column}[c]{0.45\textwidth}
+      \begin{itemize}
+        \item Scientists work in labs (mostly)
+        \pause
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \begin{itemize}
+    \item Growth conditions have large effect on scientific results
+  \end{itemize}
 \end{frame}
 
 \end{document}
