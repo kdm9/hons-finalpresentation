@@ -26,6 +26,7 @@
 \end{frame}
 
 
+%%%%%%%%%%%%% Overview %%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{Project Overview}
   \begin{itemize}
@@ -33,12 +34,14 @@
       \pause
     \item Create \& implement ``dynamic growth conditions''
       \pause
-    \item Study plant responses under these condtions
+    \item Study plant growth under these condtions
       \pause
-    \item Design \& implement data analysis pipeline
+    \item Design \& implement data analysis pipeline for RNAseq
   \end{itemize}
 \end{frame}
 
+
+%%%%%%%%%%%%% demo %%%%%%%%%%%%%%%%%%
 
 \begin{frame}{The Cazzonelli Button}
   \begin{columns}[c]
@@ -57,16 +60,18 @@
 \end{frame}
 
 
+%%%%%%%%%%%%%% Intro %%%%%%%%%%%%%%%%%
+
 \begin{frame}{The growth condition dilemma}
   \begin{columns}[c]
-    \begin{column}[c]{0.55\textwidth}
+    \begin{column}[c]{0.45\textwidth}
       \begin{figure}[h]
         \begin{center}
           \includegraphics[width=0.8\textwidth]{img/celmisia.jpg}
         \end{center}
       \end{figure}
     \end{column}
-    \begin{column}[c]{0.45\textwidth}
+    \begin{column}[c]{0.55\textwidth}
       \begin{itemize}
         \item Plants grow in nature (mostly)
       \end{itemize}
@@ -74,14 +79,14 @@
   \end{columns}
   \pause
   \begin{columns}[c]
-    \begin{column}[c]{0.55\textwidth}
+    \begin{column}[c]{0.45\textwidth}
       \begin{figure}[h]
         \begin{center}
           \includegraphics[width=0.8\textwidth]{img/normalChamber.jpg}
         \end{center}
       \end{figure}
     \end{column}
-    \begin{column}[c]{0.45\textwidth}
+    \begin{column}[c]{0.55\textwidth}
       \begin{itemize}
         \item Scientists work in labs (mostly)
         \pause
@@ -93,7 +98,62 @@
   \end{itemize}
 \end{frame}
 
+\begin{frame}{What are ``Dynamic Growth Condtions''}
+  \begin{figure}[h]
+    \begin{center}
+      \includegraphics[width=0.7\textwidth]{img/carsten.png}
+    \end{center}
+  \end{figure}
+  \begin{itemize}
+    \item Model diurnal and circuannual trends of climate
+    \item Use this to govern lab growth conditions
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Light Quantity}
+  \begin{itemize}
+    \item Plants need a ``happy medium'' of light
+    \item Too little = suboptimal growth
+    \item Too much = photooxidative damage
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Light Response \& Transcriptomics}
+  \begin{itemize}
+    \item Excess light invokes known transcrptional response
+      \pause
+    \item Many genes induced in excess light constitutively expressed in field
+      \pause
+    \item Transcriptomics sensitive to subtly/fast changes
+  \end{itemize}
+\end{frame}
+
+%\begin{frame}{History of Light Transcriptomics}
+%  \begin{itemize}
+%    \item Pogson, Nagashi, Karpinski, Jannsen
+%  \end{itemize}
+%\end{frame}
+
+\begin{frame}{Aims}
+  \begin{enumerate}
+    \item Develop a pipeline of software to analyse RNAseq datasets
+    \pause
+    \item Determine the response of \textit{Arabidopsis thaliana} to altered light intensity under
+      dynamic growth conditions
+  \end{enumerate}
+\end{frame}
+
+
 %%%%%%%%%%%%%%%%%%%%%% Aim 1 %%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Aim 1}
+  \emph{Develop a pipeline of software to analyse RNAseq datasets}
+  \pause
+  \begin{itemize}
+    \item Define \& overcome shortcomings in existing analysis pipelines
+    \item Experimentally define limitations of RNAseq experimental designs
+  \end{itemize}
+\end{frame}
 
 \begin{frame}{What's a pipeline?}
   \begin{itemize}
@@ -102,13 +162,298 @@
   \end{itemize}
   \begin{figure}[h]
     \begin{center}
-      \includegraphics[width=0.7\textwidth]{img/pipelineMaking.png}
+      \includegraphics[width=0.7\textwidth]{img/pipes.jpg}
     \end{center}
-    \label{fig:makepipe}
   \end{figure}
 \end{frame}
 
+\begin{frame}[t]{What's a pipeline?}
+%  \begin{itemize}
+%    \item A collection of software to turn raw data into results
+%  \end{itemize}
+  \begin{figure}[h]
+    \begin{center}
+      \includegraphics[width=0.7\textwidth]{img/pipelineMaking1.png}
+    \end{center}
+    \label{fig:makepipe1}
+  \end{figure}
+\end{frame}
+
+\begin{frame}[t]{What's a pipeline?}
+%  \begin{itemize}
+%    \item A collection of software to turn raw data into results
+%  \end{itemize}
+  \begin{figure}[h]
+    \begin{center}
+      \includegraphics[width=0.7\textwidth]{img/pipelineMaking2.png}
+    \end{center}
+    \label{fig:makepipe2}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Steps in an RNAseq Analysis}
+  \begin{itemize}
+    \item Raw sequence data needs to be:
+      \begin{itemize}
+        \item Filtered for quality
+        \item Aligned to the genome
+      \end{itemize}
+    \pause
+    \item Once aligned, one needs to:
+      \begin{itemize}
+        \item Quantify gene expression
+        \item Normalise counts
+        \item Perform statistical tests
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Existing ``Best Practice'' Pipeline}
+  \begin{columns}[c]
+    \begin{column}[c]{0.5\textwidth}
+      \begin{itemize}
+        \item Settings optimised for non plants
+        \item Not optimised for large/dramatic changes
+        \item Results in hypothesised weird artifacts
+      \end{itemize}
+    \end{column}
+    \pause
+    \begin{column}[c]{0.5\textwidth}
+      \begin{figure}[h]
+        \begin{center}
+          \includegraphics[width=\textwidth]{img/timecourseBump.png}
+        \end{center}
+        \label{fig:htop}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{``Improved'' plot}
+  \begin{columns}[c]
+    \begin{column}[c]{0.5\textwidth}
+      \begin{itemize}
+        \item Using \texttt{edgeR}, state of the art statistics
+        \item Hypothesis was artifacts would be removed
+      \end{itemize}
+    \end{column}
+    \pause
+    \begin{column}[c]{0.5\textwidth}
+      \begin{figure}[h]
+        \begin{center}
+          \includegraphics[width=\textwidth]{img/nobump.pdf}
+        \end{center}
+        \label{fig:htop}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Effect of Coverage}
+  \begin{columns}[c]
+    \begin{column}[c]{0.5\textwidth}
+      \begin{itemize}
+        \item Coverage depth a limiting factor in RNAseq
+        \item Aimed to empirically determine ``cutoff'' depth for our study system
+      \end{itemize}
+    \end{column}
+    \pause
+    \begin{column}[c]{0.5\textwidth}
+      \begin{figure}[h]
+        \begin{center}
+          \includegraphics[width=\textwidth]{img/coverage.pdf}
+        \end{center}
+        \label{fig:htop}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%% Aim 2 %%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Aim 2}
+  \begin{quote}
+    Determine the response of \textit{Arabidopsis thaliana} to altered light intensity under
+    dynamic growth conditions
+  \end{quote}
+  \pause
+  \begin{itemize}
+    \item Design \& implement dynamic growth conditions
+      \pause
+    \item Generate phenomic and transcriptomic QTL mapping datasets from plants grown under dynamic
+      light conditions
+      \pause
+    \item Determine effect of light intensity on transcriptome under dynamic light conditions
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Introducing the SpectralPhenoClimatron}
+  \begin{columns}[c]
+    \begin{column}[c]{0.5\textwidth}
+      \begin{itemize}
+        \item Simulate regional climates
+        \item Use model simulation to drive actual growth cabinet condtitions
+        \item Wrote python module \texttt{spcControl}
+      \end{itemize}
+    \end{column}
+    \begin{column}[c]{0.5\textwidth}
+      \begin{figure}[h]
+        \begin{center}
+          \includegraphics[width=\textwidth]{img/spc.jpg}
+        \end{center}
+        \label{fig:spc}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Investigating altered light intensity}
+  \begin{columns}[c]
+    \begin{column}[c]{0.5\textwidth}
+      \begin{itemize}
+        \item Within a simulated climate, modify light intensity
+        \item Create 3 new conditions:
+          \begin{itemize}
+            \item Sufficient light
+            \item Fluctuating light
+            \item Excess light
+          \end{itemize}
+      \end{itemize}
+    \end{column}
+    \begin{column}[c]{0.5\textwidth}
+      \begin{figure}[h]
+        \begin{center}
+          \includegraphics[width=\textwidth]{plotofsolarcalcconditions.png}
+        \end{center}
+        \label{fig:conditions}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{qPCR analysis tells a small story}
+  \begin{columns}[c]
+    \begin{column}[c]{0.5\textwidth}
+      \begin{itemize}
+        \item Examine expression of known excess light responsive genes
+        \item Show reduced induction and increased steady state expression
+      \end{itemize}
+    \end{column}
+    \begin{column}[c]{0.5\textwidth}
+      \begin{figure}[h]
+        \begin{center}
+          \includegraphics[width=\textwidth]{img/qpcr-apx2.png}
+        \end{center}
+        \label{fig:htop}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}{RNAseq shows the whole picture}
+  \begin{columns}[c]
+    \begin{column}[c]{0.5\textwidth}
+      \begin{itemize}
+        \item Overall, high variation amongst samples
+      \end{itemize}
+    \end{column}
+    \begin{column}[c]{0.5\textwidth}
+      \begin{figure}[h]
+        \begin{center}
+          \includegraphics[width=\textwidth]{img/km317bcv.pdf}
+        \end{center}
+        \label{fig:htop}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{RNAseq shows the whole picture}
+  \begin{itemize}
+    \item Less differential expression than expected
+  \end{itemize}
+  \begin{columns}[c]
+    \begin{column}[c]{0.5\textwidth}
+      \begin{figure}[h]
+        \begin{center}
+          \includegraphics[width=\textwidth]{img/317petesmear.pdf}
+        \end{center}
+        \label{fig:pete}
+      \end{figure}
+    \end{column}
+    \begin{column}[c]{0.5\textwidth}
+      \begin{figure}[h]
+        \begin{center}
+          \includegraphics[width=\textwidth]{img/km317sufsmear.pdf}
+        \end{center}
+        \label{fig:suf}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{RNAseq shows the whole picture}
+  \begin{itemize}
+    \item Amongst a noizy response, a pattern emerges
+  \end{itemize}
+  \begin{columns}[c]
+    \begin{column}[c]{0.5\textwidth}
+      \begin{figure}[h]
+        \begin{center}
+          \includegraphics[width=\textwidth]{img/kmhonsmds.pdf}
+        \end{center}
+        \label{fig:kmmds}
+      \end{figure}
+    \end{column}
+    \begin{column}[c]{0.5\textwidth}
+      \begin{figure}[h]
+        \begin{center}
+          \includegraphics[width=\textwidth]{img/km317mds.pdf}
+        \end{center}
+        \label{fig:km317mds}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+%%%%%%%%%%%%%%% conclusions %%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Conclusions}
+  \begin{itemize}
+    \item Dyanmic growth conditions give intersting biology
+    \item Patterns of differential expression seen, more replicates needed
+    \item RNAseq is here, and easier than you might think
+  \end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%% extras %%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+\end{frame}
+
+\begin{frame}{Venn Diagrams}
+  \begin{itemize}
+    \item Hard to see, but there is most overlap between Sufficient and Control, and Sufficient and
+      Fluctuating
+  \end{itemize}
+  \begin{figure}[h]
+    \begin{center}
+      \includegraphics[width=\textwidth]{img/venn.pdf}
+    \end{center}
+    \label{fig:venn}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Growth of plants}
+  \begin{itemize}
+    \item A QTL mapping set, parental lines and genetic controls
+    \item 3 replicates
+    \item \textbf{Images forthcomimg}
+  \end{itemize}
+\end{frame}
 
 \end{document}
