@@ -11,7 +11,7 @@
 \setbeamertemplate{frametitle}[default][center]
 
 % Title page
-\title{Transcriptome Variation Under Dyanmic Growth Conditions}
+\title{Transcriptome Variation Under Dynamic Growth Conditions}
 \subtitle{or: How I learned to stop worrying and love RNAseq}
 \author{Kevin Murray}
 \institute{Borevitz Lab}
@@ -34,7 +34,7 @@
       \pause
     \item Create \& implement ``dynamic growth conditions''
       \pause
-    \item Study plant growth under these condtions
+    \item Study plant growth under these conditions
       \pause
     \item Design \& implement data analysis pipeline for RNAseq
   \end{itemize}
@@ -98,14 +98,14 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{What are ``Dynamic Growth Condtions''}
+\begin{frame}{What are ``Dynamic Growth Conditions''}
   \begin{figure}[h]
     \begin{center}
       \includegraphics[width=0.7\textwidth]{img/carsten.png}
     \end{center}
   \end{figure}
   \begin{itemize}
-    \item Model diurnal and circuannual trends of climate
+    \item Model diurnal and circannual trends of climate
     \item Use this to govern lab growth conditions
   \end{itemize}
 \end{frame}
@@ -113,7 +113,7 @@
 \begin{frame}{Light Quantity}
   \begin{itemize}
     \item Plants need a ``happy medium'' of light
-    \item Too little = suboptimal growth
+    \item Too little = sub-optimal growth
     \item Too much = photooxidative damage
     \item Interesting model system for examining dynamic growth conditions
   \end{itemize}
@@ -121,7 +121,7 @@
 
 \begin{frame}{Light Response \& Transcriptomics}
   \begin{itemize}
-    \item Excess light invokes known transcrptional response
+    \item Excess light invokes known transcriptional response
     \item Many genes induced in excess light constitutively expressed in field
     \item Transcriptomics sensitive to subtle or fast changes
   \end{itemize}
@@ -207,7 +207,7 @@
       \begin{itemize}
         \item Settings optimised for non plants
         \item Not optimised for large/dramatic changes
-        \item Result in hypothesised weird artifacts
+        \item Result in hypothesised weird artefacts
         \item Can result in false positives or false negatives
       \end{itemize}
     \end{column}
@@ -228,7 +228,7 @@
     \begin{column}[c]{0.5\textwidth}
       \begin{itemize}
         \item Using \texttt{edgeR}, state of the art statistics
-        \item Hypothesis was artifacts would be removed
+        \item Hypothesis was artefacts would be removed
       \end{itemize}
     \end{column}
     \pause
@@ -291,7 +291,7 @@
     \begin{column}[c]{0.5\textwidth}
       \begin{itemize}
         \item Simulate regional climates
-        \item Use model simulation to drive actual growth cabinet condtitions
+        \item Use model simulation to drive actual growth cabinet conditions
         \item Wrote python module \texttt{spcControl}
       \end{itemize}
     \end{column}
@@ -332,12 +332,12 @@
 
 \begin{frame}{Investigating altered light intensity}
   \begin{itemize}
-    \item Hypothesised ``hardening'' of plants to harser conditions
+    \item Hypothesised ``hardening'' of plants to harsher conditions
       \begin{itemize}
         \item Increased steady state expression of stress genes
         \item Decreased induction of stress genes after stress
       \end{itemize}
-    \item Hypothesied a relative order of ``hardening''
+    \item Hypothesised a relative order of ``hardening''
       \begin{enumerate}
         \item Fluctuating light
         \item Excess light
@@ -412,7 +412,7 @@
 
 \begin{frame}{RNAseq shows the whole picture}
   \begin{itemize}
-    \item Amongst a noizy response, a pattern emerges
+    \item Amongst a noisy response, a pattern emerges
   \end{itemize}
   \begin{columns}[c]
     \begin{column}[c]{0.5\textwidth}
@@ -439,7 +439,7 @@
 
 \begin{frame}{Conclusions}
   \begin{itemize}
-    \item Dyanmic growth conditions give intersting biology
+    \item Dynamic growth conditions give interesting biology
     \item Patterns of differential expression seen, more replicates needed
     \item RNAseq is here, and easier than you might think
   \end{itemize}
