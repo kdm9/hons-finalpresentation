@@ -115,16 +115,15 @@
     \item Plants need a ``happy medium'' of light
     \item Too little = suboptimal growth
     \item Too much = photooxidative damage
+    \item Interesting model system for examining dynamic growth conditions
   \end{itemize}
 \end{frame}
 
 \begin{frame}{Light Response \& Transcriptomics}
   \begin{itemize}
     \item Excess light invokes known transcrptional response
-      \pause
     \item Many genes induced in excess light constitutively expressed in field
-      \pause
-    \item Transcriptomics sensitive to subtly/fast changes
+    \item Transcriptomics sensitive to subtle or fast changes
   \end{itemize}
 \end{frame}
 
@@ -167,10 +166,7 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}[t]{What's a pipeline?}
-%  \begin{itemize}
-%    \item A collection of software to turn raw data into results
-%  \end{itemize}
+\begin{frame}[t]{Making a pipeline?}
   \begin{figure}[h]
     \begin{center}
       \includegraphics[width=0.7\textwidth]{img/pipelineMaking1.png}
@@ -179,10 +175,7 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}[t]{What's a pipeline?}
-%  \begin{itemize}
-%    \item A collection of software to turn raw data into results
-%  \end{itemize}
+\begin{frame}[t]{Making a pipeline?}
   \begin{figure}[h]
     \begin{center}
       \includegraphics[width=0.7\textwidth]{img/pipelineMaking2.png}
@@ -214,7 +207,8 @@
       \begin{itemize}
         \item Settings optimised for non plants
         \item Not optimised for large/dramatic changes
-        \item Results in hypothesised weird artifacts
+        \item Result in hypothesised weird artifacts
+        \item Can result in false positives or false negatives
       \end{itemize}
     \end{column}
     \pause
@@ -255,6 +249,9 @@
       \begin{itemize}
         \item Coverage depth a limiting factor in RNAseq
         \item Aimed to empirically determine ``cutoff'' depth for our study system
+        \item Hypothesised that 2 million reads gives 20\% reduction in power
+        \item 2 million reads gives $\approx$ 50\% reduction
+        \item Conclusion: use $>$ 2M reads per lane
       \end{itemize}
     \end{column}
     \pause
@@ -325,12 +322,29 @@
     \begin{column}[c]{0.5\textwidth}
       \begin{figure}[h]
         \begin{center}
-          \includegraphics[width=\textwidth]{plotofsolarcalcconditions.png}
+          \includegraphics[width=\textwidth]{img/allcond.png}
         \end{center}
         \label{fig:conditions}
       \end{figure}
     \end{column}
   \end{columns}
+\end{frame}
+
+\begin{frame}{Investigating altered light intensity}
+  \begin{itemize}
+    \item Hypothesised ``hardening'' of plants to harser conditions
+      \begin{itemize}
+        \item Increased steady state expression of stress genes
+        \item Decreased induction of stress genes after stress
+      \end{itemize}
+    \item Hypothesied a relative order of ``hardening''
+      \begin{enumerate}
+        \item Fluctuating light
+        \item Excess light
+        \item Sufficient light
+        \item Standard growth conditions
+      \end{enumerate}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{qPCR analysis tells a small story}
@@ -339,6 +353,7 @@
       \begin{itemize}
         \item Examine expression of known excess light responsive genes
         \item Show reduced induction and increased steady state expression
+        \item Hypotheses appear  correct
       \end{itemize}
     \end{column}
     \begin{column}[c]{0.5\textwidth}
@@ -442,7 +457,7 @@
   \end{itemize}
   \begin{figure}[h]
     \begin{center}
-      \includegraphics[width=\textwidth]{img/venn.pdf}
+      \includegraphics[width=0.6\textwidth]{img/venn.pdf}
     \end{center}
     \label{fig:venn}
   \end{figure}
@@ -452,8 +467,27 @@
   \begin{itemize}
     \item A QTL mapping set, parental lines and genetic controls
     \item 3 replicates
-    \item \textbf{Images forthcomimg}
+    \item Grown for 2 weeks, then dynamic growth conditions
+    \item Assay expression before and after high light pulse treatment at 5 weeks
   \end{itemize}
+  \begin{columns}[c]
+    \begin{column}[c]{0.5\textwidth}
+      \begin{figure}[h]
+        \begin{center}
+          \includegraphics[width=\textwidth]{img/Col0_4-P081-007.jpg}
+        \end{center}
+        \label{fig:plant1}
+      \end{figure}
+    \end{column}
+    \begin{column}[c]{0.5\textwidth}
+      \begin{figure}[h]
+        \begin{center}
+          \includegraphics[width=\textwidth]{img/Col0_5-P079-007.jpg}
+        \end{center}
+        \label{fig:plant2}
+      \end{figure}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \end{document}
