@@ -2,9 +2,18 @@
 \usepackage{textcomp}
 \usepackage{caption}
 \usepackage{listings}
-
 \usepackage{multicol}
 
+%bib/citations
+\usepackage[
+  uniquename=false,
+  uniquelist=false,
+  backend=biber,
+  style=authoryear,
+  url=false,
+  isbn=false
+  ]{biblatex}
+\addbibresource{finalPres.bib}
 
 % Beamer
 \usetheme{default}
@@ -19,6 +28,7 @@
 
 
 \begin{document}
+
 
 \begin{frame}
   \titlepage
