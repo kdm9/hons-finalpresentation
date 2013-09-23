@@ -1,5 +1,5 @@
 COMPILER=lualatex --interaction=batchmode -shell-escape
-BIB_COMPILER=biber -q
+BIB_COMPILER=biber -q --bblsafechars
 LATEX_SRC=$(wildcard *.latex)
 PIE=perl -pi -e
 
