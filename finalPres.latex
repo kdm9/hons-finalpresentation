@@ -130,22 +130,16 @@
 \end{frame}
 
 \begin{frame}{Introducing the SpectralPhenoClimatron}
-%  \begin{columns}[c]
-%    \begin{column}[c]{0.5\textwidth}
-      \begin{figure}[h]
-        \begin{center}
-          \includegraphics[width=0.8\textwidth]{img/carsten.png}
-        \end{center}
-      \end{figure}
-%    \end{column}
-%    \begin{column}[c]{0.5\textwidth}
-      \begin{itemize}
-        \item Simulate regional climates
-        \item Model diurnal and circannual trends of climate
-      \end{itemize}
-%    \end{column}
-%  \end{columns}
-    {\raggedleft \footnotesize{\autocite{kulheim_rapid_2002}}}
+  \begin{figure}[h]
+    \begin{center}
+      \includegraphics[width=0.8\textwidth]{img/carsten.png}
+    \end{center}
+  \end{figure}
+  \begin{itemize}
+    \item Simulate regional climates
+    \item Model diurnal and circannual trends of climate
+  \end{itemize}
+  {\raggedleft \footnotesize{\autocite{kulheim_rapid_2002}}}
 \end{frame}
 
 \begin{frame}{Controlling the SpectralPhenoClimatron}
@@ -174,27 +168,21 @@
 \end{frame}
 
 \begin{frame}{Investigating altered light intensity}
-%   \begin{columns}[c]
-%   \begin{column}[c]{0.5\textwidth}
+  \begin{itemize}
+    \item Within a simulated climate, modify light intensity
+    \item Create 3 new conditions:
       \begin{itemize}
-        \item Within a simulated climate, modify light intensity
-        \item Create 3 new conditions:
-          \begin{itemize}
-            \item Sufficient light
-            \item Fluctuating light
-            \item Excess light
-          \end{itemize}
+        \item Sufficient light
+        \item Fluctuating light
+        \item Excess light
       \end{itemize}
-%    \end{column}
-%    \begin{column}[c]{0.5\textwidth}
-      \begin{figure}[h]
-        \begin{center}
-          \includegraphics[width=\textwidth]{img/3panel-allcond.png}
-        \end{center}
-        \label{fig:conditions}
-      \end{figure}
-%    \end{column}
-%  \end{columns}
+  \end{itemize}
+  \begin{figure}[h]
+    \begin{center}
+      \includegraphics[width=\textwidth]{img/3panel-allcond.png}
+    \end{center}
+    \label{fig:conditions}
+  \end{figure}
 \end{frame}
 
 \begin{frame}{Investigating altered light intensity}
@@ -281,7 +269,6 @@
     \end{column}
   \end{columns}
 \end{frame}
-
 
 \begin{frame}{The Cazzonelli Button}
   \begin{columns}[c]
@@ -398,10 +385,9 @@
 \end{frame}
 
 
-
+%%%%%%%%%%%%%%%%%%%%%% Aim 2 %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%% wet lab %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%% Aim 2 %%%%%%%%%%%%%%%%%%%%%%%
 % QTL expt
 
 
@@ -420,7 +406,6 @@
     \item Look for loci which control transcriptonal response to abiotic stress
   \end{itemize}
 \end{frame}
-
 
 \begin{frame}{Growth of plants}
   \begin{itemize}
@@ -513,7 +498,6 @@
   \end{columns}
 \end{frame}
 
-
 \begin{frame}{qPCR analysis tells a small story}
   \begin{columns}[c]
     \begin{column}[c]{0.5\textwidth}
@@ -533,7 +517,6 @@
     \end{column}
   \end{columns}
 \end{frame}
-
 
 \begin{frame}{RNAseq shows the whole picture}
   \begin{itemize}
@@ -564,24 +547,12 @@
   \begin{itemize}
     \item Amongst a noisy response, a pattern emerges
   \end{itemize}
-%  \begin{columns}[c]
-%    \begin{column}[c]{0.5\textwidth}
-%      \begin{figure}[h]
-%        \begin{center}
-%          \includegraphics[width=\textwidth]{img/kmhonsmds.png}
-%        \end{center}
-%        \label{fig:kmmds}
-%      \end{figure}
-%    \end{column}
-%    \begin{column}[c]{0.5\textwidth}
-      \begin{figure}[h]
-        \begin{center}
-          \includegraphics[width=0.8\textwidth]{img/km317mds.png}
-        \end{center}
-        \label{fig:km317mds}
-      \end{figure}
-%    \end{column}
-%  \end{columns}
+  \begin{figure}[h]
+    \begin{center}
+      \includegraphics[width=0.8\textwidth]{img/km317mds.png}
+    \end{center}
+    \label{fig:km317mds}
+  \end{figure}
 \end{frame}
 
 
