@@ -43,14 +43,30 @@
 \end{frame}
 
 
-\begin{frame}{Overview}
-  \begin{itemize}
-    \item Plants experience abiotic stress %almost constantly
-      in nature
-    \item Plants exhibit natural variation in stress tolerance
-    \item Studying natural variation can give clues to mechanism
-    \item Match natural variation to natural conditions in study
-  \end{itemize}
+\begin{frame}{Project Background}
+  \begin{columns}[c]
+    \begin{column}[c]{0.65\textwidth}
+      \begin{itemize}
+        \item Plants experience abiotic stress %almost constantly
+          in nature
+        \item Plants exhibit natural variation in stress tolerance
+        \item Studying natural variation can give clues to mechanism
+        \item Match natural variation to natural conditions in study
+      \end{itemize}
+    \end{column}
+    \begin{column}[c]{0.45\textwidth}
+      \begin{figure}[h]
+        \begin{center}
+          \includegraphics[width=0.7\textwidth]{img/athLab.jpg}
+        \end{center}
+      \end{figure}
+      \begin{figure}[h]
+        \begin{center}
+          \includegraphics[width=0.6\textwidth]{img/athNatural.jpg}
+        \end{center}
+      \end{figure}
+    \end{column}
+  \end{columns}
 %  \begin{itemize}
 %    \item A set of broad hypotheses:
 %      \begin{itemize}
@@ -230,7 +246,7 @@
 
 \begin{frame}{Plant Growth Under Dynamic Growth Conditions}
   \begin{itemize}
-    \item A QTL mapping set; Col, Cvi, Ler Ecotypes; photo-inhibition mutants
+    \item A QTL mapping set; Col, Cvi, Ler Ecotypes%; photo-inhibition mutants
     \item Over 1200 plants planted
     \item Grown for 3 weeks dynamic growth conditions
     \item Assay expression before and after high light pulse treatment% at 5 weeks
@@ -319,7 +335,7 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Cheaper, Higher Throughput Method Needed}
+\begin{frame}{Cheaper, Higher Throughput RNAseq}
   \begin{columns}[c]
     \begin{column}[c]{0.5\textwidth}
       \begin{figure}[h]
@@ -347,7 +363,7 @@
     \begin{column}[c]{0.5\textwidth}
       \begin{figure}[h]
         \begin{center}
-          \includegraphics[width=\textwidth]{img/libraryPrepFD.png}
+          \includegraphics[width=\textwidth]{img/libraryPrepIlluminaFD.png}
         \end{center}
         \label{fig:libprepfd}
       \end{figure}
@@ -379,21 +395,28 @@
 %  \end{figure}
 %\end{frame}
 
-\begin{frame}{The Cazzonelli Button}
+\begin{frame}{RNAseq Analysis Made Easy!}
   \begin{columns}[c]
+    \begin{column}[c]{0.5\textwidth}
+      \begin{figure}[h]
+        \begin{center}
+          \includegraphics[width=\textwidth]{img/honoursFDHighlighted.png}
+        \end{center}
+        \label{fig:honsfdhl}
+      \end{figure}
+    \end{column}
+    \pause
     \begin{column}[c]{0.5\textwidth}
       \begin{quote}
         ``Can't there just be a 'do my bioinformatics' button?''
       \end{quote}
-      \begin{quote}
-        Well, we laughed at you Chris, but its now \textbf{almost} that easy!
-      \end{quote}
-    \end{column}
-    \pause
-    \begin{column}[c]{0.5\textwidth}
+%      \begin{quote}
+%        Well, we laughed at you Chris, but its now \textbf{almost} that easy!
+%      \end{quote}
+      \pause
       \begin{figure}[h]
         \begin{center}
-          \includegraphics[width=\textwidth]{img/cazBtn.png}
+          \includegraphics[width=0.6\textwidth]{img/cazBtn.png}
         \end{center}
         \label{fig:htop}
       \end{figure}
@@ -404,7 +427,7 @@
 \begin{frame}{How To Run a Pipeline}
   \begin{columns}[c]
     \begin{column}[c]{0.5\textwidth}
-      \begin{exampleblock}{Command}
+      \begin{exampleblock}{Command:}
         \mint{sh}|bash runner.sh keyfile.key|
       \end{exampleblock}
       \begin{figure}[h]
@@ -451,25 +474,25 @@
 \end{frame}
 
 \begin{frame}{RNAseq Pipeline Components}
-  \begin{columns}[c]
-    \begin{column}[c]{0.5\textwidth}
+%  \begin{columns}[c]
+%    \begin{column}[c]{0.5\textwidth}
       \begin{figure}[h]
         \begin{center}
-          \includegraphics[width=\textwidth]{img/informaticsFD.png}
+          \includegraphics[width=\textwidth]{img/informaticsFDProgs.png}
         \end{center}
         \label{fig:infofd}
       \end{figure}
-    \end{column}
-    \begin{column}[c]{0.5\textwidth}
-      \begin{enumerate}
-        \item \texttt{fastqc}
-        \item \texttt{scythe}, \texttt{seqtk}
-        \item \texttt{subread} (\texttt{tophat}, \texttt{subjunc})
-        \item \texttt{featureCounts}
-        \item \texttt{edgeR} (\texttt{DESeq}, \texttt{cuffdiff})
-      \end{enumerate}
-    \end{column}
-  \end{columns}
+%    \end{column}
+%    \begin{column}[c]{0.5\textwidth}
+%      \begin{enumerate}
+%        \item \texttt{fastqc}
+%        \item \texttt{scythe}, \texttt{seqtk}
+%        \item \texttt{subread} (\texttt{tophat}, \texttt{subjunc})
+%        \item \texttt{featureCounts}
+%        \item \texttt{edgeR} (\texttt{DESeq}, \texttt{cuffdiff})
+%      \end{enumerate}
+%    \end{column}
+%  \end{columns}
 \end{frame}
 
 \begin{frame}{Effect of Sequencing Depth}
