@@ -6,6 +6,8 @@
 \usepackage{multicol}
 \usepackage{minted}
 %\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{media9}
+\usepackage[utf8]{luainputenc}
 
 %bib/citations
 \usepackage[
@@ -23,8 +25,8 @@
 \setbeamertemplate{frametitle}[default][center]
 
 % Title page
-\title{Transcriptome Variation Under Dynamic Growth Conditions}
-%\subtitle{or: How I learned to stop worrying and love RNAseq}
+\title{Transcriptome Variation in \textit{Arabidopsis} Under Dynamic Growth Conditions}
+\subtitle{or: How I learned to stop worrying and love RNAseq}
 \author{Kevin Murray}
 \institute{Borevitz and Pogson Labs}
 \date{\today}
@@ -41,15 +43,22 @@
 \end{frame}
 
 
-\begin{frame}{Big Picutre Question}
+\begin{frame}{Overview}
   \begin{itemize}
-    \item A set of broad hypotheses:
-      \begin{itemize}
-        \item In nature, plants acclimate to repeated stresses
-        \item After acclimation, plants will be more tolerant to stresses
-        \item We can recreate this acclimation in lab using dynamic growth conditions
-      \end{itemize}
+    \item Plants experience abiotic stress %almost constantly
+      in nature
+    \item Plants exhibit natural variation in stress tolerance
+    \item Studying natural variation can give clues to mechanism
+    \item Match natural variation to natural conditions in study
   \end{itemize}
+%  \begin{itemize}
+%    \item A set of broad hypotheses:
+%      \begin{itemize}
+%        \item In nature, plants acclimate to repeated stresses
+%        \item After acclimation, plants will be more tolerant to stresses
+%        \item We can recreate this acclimation in lab using dynamic growth conditions
+%      \end{itemize}
+%  \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%% Overview %%%%%%%%%%%%%%%%%%%%%%
@@ -63,35 +72,35 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Investigating altered light intensity}
-  \begin{itemize}
-    \item Hypothesised ``hardening'' of plants to harsher conditions
-      \begin{itemize}
-        \item Increased steady state expression of stress genes
-        \item Decreased induction of stress genes after stress
-      \end{itemize}
-    \item Hypothesised a relative order of ``hardening''
-      \begin{enumerate}
-        \item Fluctuating light
-        \item Excess light
-        \item Sufficient light
-        \item Standard growth conditions
-      \end{enumerate}
-  \end{itemize}
-\end{frame}
+%\begin{frame}{Investigating altered light intensity}
+%  \begin{itemize}
+%    \item Hypothesised ``hardening'' of plants to harsher conditions
+%      \begin{itemize}
+%        \item Increased steady state expression of stress genes
+%        \item Decreased induction of stress genes after stress
+%      \end{itemize}
+%    \item Hypothesised a relative order of ``hardening''
+%      \begin{enumerate}
+%        \item Fluctuating light
+%        \item Excess light
+%        \item Sufficient light
+%        \item Standard growth conditions
+%      \end{enumerate}
+%  \end{itemize}
+%\end{frame}
+
+%%%%%%%%%%%%%% Aim 1 %%%%%%%%%%%%%%%%%
 
 \begin{frame}{Aims}
   \begin{enumerate}
-    \item Design \& implement dynamic growth conditions
-    \item Develop a pipeline of software to analyse RNAseq datasets
-    \item Generate phenomic and transcriptomic QTL mapping datasets from plants grown under dynamic
-      light conditions
+    \item \textcolor{red}{Design \& implement dynamic growth conditions}
+    \item Develop improved bioinformatic and molecular protocols for High-throughput RNAseq experiments
+%    \item Develop a pipeline of software to analyse RNAseq datasets
+%    \item Generate phenomic and transcriptomic QTL mapping datasets from plants grown under dynamic
+%      light conditions
     \item Determine effect of light intensity on transcriptome under dynamic light conditions
   \end{enumerate}
 \end{frame}
-
-
-%%%%%%%%%%%%%% Aim 1 %%%%%%%%%%%%%%%%%
 
 \begin{frame}{The growth condition dilemma}
   \begin{columns}[c]
@@ -101,16 +110,6 @@
           \includegraphics[width=0.7\textwidth]{img/celmisia.jpg}
         \end{center}
       \end{figure}
-    \end{column}
-    \begin{column}[c]{0.55\textwidth}
-      \begin{itemize}
-        \item Plants grow in nature (mostly)
-      \end{itemize}
-    \end{column}
-  \end{columns}
-  \pause
-  \begin{columns}[c]
-    \begin{column}[c]{0.45\textwidth}
       \begin{figure}[h]
         \begin{center}
           \includegraphics[width=0.7\textwidth]{img/normalChamber.jpg}
@@ -119,50 +118,77 @@
     \end{column}
     \begin{column}[c]{0.55\textwidth}
       \begin{itemize}
-        \item Scientists work in labs (mostly)
+        \item Plants grow in nature
+        \item A log of science done in labs
       \end{itemize}
+      \begin{figure}[h]
+        \begin{center}
+          \includegraphics[width=\textwidth]{img/carsten.png}
+        \end{center}
+      \end{figure}
+      {\raggedright \scriptsize{\autocite{kulheim_rapid_2002}}}
     \end{column}
   \end{columns}
-  \pause
   \begin{itemize}
-    \item Aim to ``merge'' elements of these two scenarios
+    \item Aim to merge elements of these two scenarios
   \end{itemize}
 \end{frame}
 
 \begin{frame}{Introducing the SpectralPhenoClimatron}
-  \begin{figure}[h]
-    \begin{center}
-      \includegraphics[width=0.8\textwidth]{img/carsten.png}
-    \end{center}
-  \end{figure}
-  \begin{itemize}
-    \item Simulate regional climates
-    \item Model diurnal and circannual trends of climate
-  \end{itemize}
-  {\raggedleft \footnotesize{\autocite{kulheim_rapid_2002}}}
+  \begin{columns}[c]
+    \begin{column}[c]{0.5\textwidth}
+      \begin{itemize}
+        \item Several new technologies
+          \begin{itemize}
+            \item Growth Cabinets
+            \item LED Arrays
+            \item Imaging hardware
+          \end{itemize}
+        \item Simulate regional climates
+        \item Model diurnal and circannual trends of climate
+        \item Use model simulation to drive actual growth cabinet conditions
+      \end{itemize}
+    \end{column}
+    \begin{column}[c]{0.5\textwidth}
+      \begin{figure}[h]
+        \begin{center}
+          \includegraphics[width=0.8\textwidth]{img/spc2.jpg}
+        \end{center}
+        \label{fig:spc}
+      \end{figure}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}{Controlling the SpectralPhenoClimatron}
   \begin{columns}[c]
     \begin{column}[c]{0.5\textwidth}
       \begin{itemize}
-        \item Use model simulation to drive actual growth cabinet conditions
+        \item Disparate pieces of technology
         \item Need software ``glue'' to stick bits together
-        \item Wrote \texttt{spcControl}
+        \item Wrote \texttt{spcControl} Python3 module
           \begin{itemize}
             \item 750 lines
             \item 134 minor, 16 major versions
+            \item Open source, on \texttt{github.com}
           \end{itemize}
       \end{itemize}
     \end{column}
     \begin{column}[c]{0.5\textwidth}
-      Movie:
       \begin{figure}[h]
         \begin{center}
-          \includegraphics[width=0.6\textwidth]{img/spc.jpg}
+          \includegraphics[width=\textwidth]{img/cableClusterfuck.jpg}
         \end{center}
-        \label{fig:spc}
+        \label{fig:cable}
       \end{figure}
+      \includemedia[
+        label=spcvid,
+        width=\textwidth,
+        addresource=img/conviron.mp4,
+        flashvars={source=img/conviron.mp4}
+        ]
+      {\includegraphics[width=\textwidth]{img/spc.jpg}}
+      {VPlayer.swf}
     \end{column}
   \end{columns}
 \end{frame}
@@ -202,31 +228,54 @@
   \end{itemize}
 \end{frame}
 
-
-%%%%%%%%%%%%%%%%%%%%%% Aim 2 %%%%%%%%%%%%%%%%%%%%%%%
-% RNAseq pipeline
-
-\begin{frame}{Aims}
+\begin{frame}{Plant Growth Under Dynamic Growth Conditions}
   \begin{itemize}
-    \item Design \& implement dynamic growth conditions
-    \item \textcolor{red}{Develop a pipeline of software to analyse RNAseq datasets}
-    \item Generate phenomic and transcriptomic QTL mapping datasets from plants grown under dynamic
-      light conditions
-    \item Determine effect of light intensity on transcriptome under dynamic light conditions
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{What's a pipeline?}
-  \begin{itemize}
-    \item A collection of software to turn raw data into results
+    \item A QTL mapping set; Col, Cvi, Ler Ecotypes; photo-inhibition mutants
+    \item Over 1200 plants planted
+    \item Grown for 3 weeks dynamic growth conditions
+    \item Assay expression before and after high light pulse treatment% at 5 weeks
   \end{itemize}
   \begin{figure}[h]
     \begin{center}
-      \includegraphics[width=0.7\textwidth]{img/pipes.jpg}
+      \includegraphics[width=0.7\textwidth]{img/fullChamber.jpg}
     \end{center}
+    \label{fig:fullchamber}
   \end{figure}
+%  \begin{columns}[c]
+%    \begin{column}[c]{0.5\textwidth}
+%      \begin{figure}[h]
+%        \begin{center}
+%          \includegraphics[width=0.7\textwidth]{img/Col0_4-P081-007.jpg}
+%        \end{center}
+%        \caption{Sufficient Light}
+%        \label{fig:plant1}
+%      \end{figure}
+%    \end{column}
+%    \begin{column}[c]{0.5\textwidth}
+%      \begin{figure}[h]
+%        \begin{center}
+%          \includegraphics[width=0.7\textwidth]{img/Col0_5-P079-007.jpg}
+%        \end{center}
+%        \caption{Excess Light}
+%        \label{fig:plant2}
+%      \end{figure}
+%    \end{column}
+%  \end{columns}
 \end{frame}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%% wet lab %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Aims}
+  \begin{enumerate}
+    \item Design \& implement dynamic growth conditions
+    \item \textcolor{red}{Develop improved bioinformatic and molecular protocols for High-throughput RNAseq experiments}
+%    \item Develop a pipeline of software to analyse RNAseq datasets
+%    \item Generate phenomic and transcriptomic QTL mapping datasets from plants grown under dynamic
+%      light conditions
+    \item Determine effect of light intensity on transcriptome under dynamic light conditions
+  \end{enumerate}
+\end{frame}
 
 \begin{frame}{How does RNAseq work?}
   \begin{columns}[c]
@@ -270,6 +319,66 @@
   \end{columns}
 \end{frame}
 
+\begin{frame}{Cheaper, Higher Throughput Method Needed}
+  \begin{columns}[c]
+    \begin{column}[c]{0.5\textwidth}
+      \begin{figure}[h]
+        \begin{center}
+          \includegraphics[width=\textwidth]{img/libraryPrepFD.png}
+        \end{center}
+        \label{fig:libprepfd}
+      \end{figure}
+    \end{column}
+    \begin{column}[c]{0.5\textwidth}
+      \begin{itemize}
+        \item Adapted from \textcite{kumar_high-throughput_2012}
+        \item On-bead SPRI protocol
+        \item Performed in 96 well plate
+        \item $\approx$ \$50 per sample, 96 samples per lane
+        \item Successful until final step
+        \item Sidelined due to lack of time
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Illumina RNAseq Library Prep.}
+  \begin{columns}[c]
+    \begin{column}[c]{0.5\textwidth}
+      \begin{figure}[h]
+        \begin{center}
+          \includegraphics[width=\textwidth]{img/libraryPrepFD.png}
+        \end{center}
+        \label{fig:libprepfd}
+      \end{figure}
+    \end{column}
+    \begin{column}[c]{0.5\textwidth}
+      \begin{itemize}
+        \item 3-5 day protocol
+        \item Up to 12 samples per lane
+        \item \$240-400 per sample
+      \end{itemize}
+      \begin{figure}[h]
+        \begin{center}
+          \includegraphics[width=\textwidth]{img/gels.png}
+        \end{center}
+        \label{fig:gels}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+%\begin{frame}{What's a pipeline?}
+%  \begin{itemize}
+%    \item A collection of software to turn raw data into results
+%  \end{itemize}
+%  \begin{figure}[h]
+%    \begin{center}
+%      \includegraphics[width=0.7\textwidth]{img/pipes.jpg}
+%    \end{center}
+%  \end{figure}
+%\end{frame}
+
 \begin{frame}{The Cazzonelli Button}
   \begin{columns}[c]
     \begin{column}[c]{0.5\textwidth}
@@ -280,10 +389,11 @@
         Well, we laughed at you Chris, but its now \textbf{almost} that easy!
       \end{quote}
     \end{column}
+    \pause
     \begin{column}[c]{0.5\textwidth}
       \begin{figure}[h]
         \begin{center}
-          \includegraphics[width=\textwidth]{img/htop.png}
+          \includegraphics[width=\textwidth]{img/cazBtn.png}
         \end{center}
         \label{fig:htop}
       \end{figure}
@@ -333,7 +443,8 @@
         \item Written in bash, python and R
         \item 144 minor versions
         \item Code is on \texttt{github.com}
-        \item Licensed under GNU GPL v3
+        \item Open source (GPL v3)
+        \item You should use it!
       \end{itemize}
     \end{column}
   \end{columns}
@@ -361,115 +472,44 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Effect of Coverage}
-  \begin{columns}[c]
-    \begin{column}[c]{0.5\textwidth}
+\begin{frame}{Effect of Sequencing Depth}
+%  \begin{columns}[c]
+%    \begin{column}[c]{0.5\textwidth}
       \begin{itemize}
-        \item Coverage depth a limiting factor in RNAseq
-        \item Aimed to empirically determine ``cutoff'' depth for our study system
-        \item Hypothesised that 2 million reads gives 20\% reduction in power
-        \item 2 million reads gives $\approx$ 50\% reduction
-        \item Conclusion: use $>$ 2M reads per lane
+        \item Trade off between multiplexing and statistical power
+        \item Conclusion: Recommend 48x multiplexing (5M reads)
+%        \item Coverage depth a limiting factor in RNAseq
+%        \item Aimed to empirically determine ``cutoff'' depth for our study system
+%        \item Hypothesised that 2 million reads gives 20\% reduction in power
+%        \item 2 million reads gives $\approx$ 50\% reduction
+%        \item Conclusion: use $>$ 2M reads per lane
       \end{itemize}
-    \end{column}
-    \pause
-    \begin{column}[c]{0.5\textwidth}
+%    \end{column}
+%    \pause
+%    \begin{column}[c]{0.5\textwidth}
       \begin{figure}[h]
         \begin{center}
-          \includegraphics[width=\textwidth]{img/coverage.png}
+          \includegraphics[width=0.55\textwidth]{img/coverage.png}
         \end{center}
         \label{fig:htop}
       \end{figure}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%% Aim 2 %%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%% wet lab %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% QTL expt
-
-
-\begin{frame}{Aims}
-  \begin{itemize}
-    \item Design \& implement dynamic growth conditions
-    \item Develop a pipeline of software to analyse RNAseq datasets
-    \item \textcolor{red}{Generate phenomic and transcriptomic QTL mapping datasets from plants grown under dynamic
-      light conditions}
-    \item Determine effect of light intensity on transcriptome under dynamic light conditions
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{QTL mapping aims}
-  \begin{itemize}
-    \item Look for loci which control transcriptonal response to abiotic stress
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Growth of plants}
-  \begin{itemize}
-    \item A QTL mapping set, parental lines and genetic controls
-    \item 3 replicates
-    \item Grown for 2 weeks, then dynamic growth conditions
-    \item Assay expression before and after high light pulse treatment at 5 weeks
-  \end{itemize}
-  \begin{columns}[c]
-    \begin{column}[c]{0.5\textwidth}
-      \begin{figure}[h]
-        \begin{center}
-          \includegraphics[width=0.7\textwidth]{img/Col0_4-P081-007.jpg}
-        \end{center}
-        \caption{Sufficient Light}
-        \label{fig:plant1}
-      \end{figure}
-    \end{column}
-    \begin{column}[c]{0.5\textwidth}
-      \begin{figure}[h]
-        \begin{center}
-          \includegraphics[width=0.7\textwidth]{img/Col0_5-P079-007.jpg}
-        \end{center}
-        \caption{Excess Light}
-        \label{fig:plant2}
-      \end{figure}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}{Cheaper, Higher Throughput Method Needed}
-  \begin{columns}[c]
-    \begin{column}[c]{0.5\textwidth}
-      \begin{figure}[h]
-        \begin{center}
-          \includegraphics[width=\textwidth]{img/libraryPrepFD.png}
-        \end{center}
-        \label{fig:libprepfd}
-      \end{figure}
-    \end{column}
-    \begin{column}[c]{0.5\textwidth}
-      \begin{itemize}
-        \item Adapted from \textcite{kumar_high-throughput_2012}
-        \item On-bead SPRI protocol
-        \item Performed in 96 well plate
-        \item $\approx$ \$50 per sample, 96 samples per lane
-        \item Successful until final step
-        \item Sidelined due to lack of time
-      \end{itemize}
-    \end{column}
-  \end{columns}
+%    \end{column}
+%  \end{columns}
 \end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%% Aim 4 %%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{Aims}
-  \begin{itemize}
+  \begin{enumerate}
     \item Design \& implement dynamic growth conditions
-    \item Develop a pipeline of software to analyse RNAseq datasets
-    \item \textcolor{red}{Generate phenomic and transcriptomic QTL mapping datasets from plants grown under dynamic
-      light conditions}
-    \item Determine effect of light intensity on transcriptome under dynamic light conditions
-  \end{itemize}
+    \item Develop improved bioinformatic and molecular protocols for High-throughput RNAseq experiments
+%    \item Develop a pipeline of software to analyse RNAseq datasets
+%    \item Generate phenomic and transcriptomic QTL mapping datasets from plants grown under dynamic
+%      light conditions
+    \item \textcolor{red}{Determine effect of light intensity on transcriptome under dynamic light
+      conditions}
+  \end{enumerate}
 \end{frame}
 
 \begin{frame}{Illumina RNAseq Library Prep.}
@@ -555,7 +595,6 @@
   \end{figure}
 \end{frame}
 
-
 \begin{frame}{RNAseq shows the whole picture}
   \begin{itemize}
     \item Less differential expression than expected
@@ -604,9 +643,16 @@
     \item Analyse QTL mapping set:
       \begin{itemize}
         \item RNAseq to map QTLs for expression of stress responsive genes
-        \item Find phenomic traits e.g. anthocyanin acclumulation
+        \item Find phenomic traits e.g. anthocyanin accumulation
       \end{itemize}
-    \item Repeat entire experiment with improved sampling techniques - increase statsistical power
+    \item Repeat entire experiment with improved sampling techniques - increase statistical power
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Acknowledgements}
+  \begin{itemize}
+    \item Pogson Lab
+    \item Borevitz lab
   \end{itemize}
 \end{frame}
 
@@ -761,6 +807,13 @@
     \label{fig:venn}
   \end{figure}
 \end{frame}
+
+\begin{frame}{QTL mapping aims}
+  \begin{itemize}
+    \item Look for loci which control transcriptional response to abiotic stress
+  \end{itemize}
+\end{frame}
+
 
 %        \item $K \propto [mRNA]$
 \end{document}
