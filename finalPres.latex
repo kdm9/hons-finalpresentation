@@ -51,7 +51,7 @@
           in nature
         \item Plants exhibit natural variation in stress tolerance
         \item Studying natural variation can give clues to mechanism
-        \item Match natural variation to natural conditions in study
+        \item Matching natural variation to dynamic conditions may uncover cryptic phenotypes
       \end{itemize}
     \end{column}
     \begin{column}[c]{0.45\textwidth}
@@ -118,7 +118,7 @@
   \end{enumerate}
 \end{frame}
 
-\begin{frame}{The growth condition dilemma}
+\begin{frame}{Aim 1: The growth condition dilemma}
   \begin{columns}[c]
     \begin{column}[c]{0.45\textwidth}
       \begin{figure}[h]
@@ -135,7 +135,7 @@
     \begin{column}[c]{0.55\textwidth}
       \begin{itemize}
         \item Plants grow in nature
-        \item A log of science done in labs
+        \item A lot of science done in labs
       \end{itemize}
       \begin{figure}[h]
         \begin{center}
@@ -150,7 +150,7 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Introducing the SpectralPhenoClimatron}
+\begin{frame}{Aim 1: Introducing the SpectralPhenoClimatron}
   \begin{columns}[c]
     \begin{column}[c]{0.5\textwidth}
       \begin{itemize}
@@ -176,13 +176,13 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Controlling the SpectralPhenoClimatron}
+\begin{frame}{Aim 1: Result: Controlling the SpectralPhenoClimatron}
   \begin{columns}[c]
     \begin{column}[c]{0.5\textwidth}
       \begin{itemize}
         \item Disparate pieces of technology
         \item Need software ``glue'' to stick bits together
-        \item Wrote \texttt{spcControl} Python3 module
+        \item Wrote \texttt{spcControl} Python module
           \begin{itemize}
             \item 750 lines
             \item 134 minor, 16 major versions
@@ -197,20 +197,27 @@
         \end{center}
         \label{fig:cable}
       \end{figure}
-      \includemedia[
-        label=spcvid,
-        width=\textwidth,
-        addresource=img/conviron.mp4,
-        flashvars={source=img/conviron.mp4}
-        ]
-      {\includegraphics[width=\textwidth]{img/spc.jpg}}
-      {VPlayer.swf}
+      \begin{figure}[h]
+        \begin{center}
+          \includegraphics[width=\textwidth]{img/spc.jpg}
+        \end{center}
+        \label{fig:cable}
+      \end{figure}
+%      \includemedia[
+%        label=spcvid,
+%        width=\textwidth,
+%        addresource=img/conviron.mp4,
+%        flashvars={source=img/conviron.mp4}
+%        ]
+%      {\includegraphics[width=\textwidth]{img/spc.jpg}}
+%      {VPlayer.swf}
     \end{column}
   \end{columns}
 \end{frame}
 
-\begin{frame}{Investigating altered light intensity}
+\begin{frame}{Aim 1: Result: Novel Growth Conditions}
   \begin{itemize}
+    \item Investigating altered light intensity
     \item Within a simulated climate, modify light intensity
     \item Create 3 new conditions:
       \begin{itemize}
@@ -227,7 +234,7 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}{Investigating altered light intensity}
+\begin{frame}{Aim 1: Hypothesis: Plants Become Hardened}
   \begin{itemize}
     \item Hypothesised ``hardening'' of plants to harsher conditions
       \begin{itemize}
@@ -244,7 +251,7 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Plant Growth Under Dynamic Growth Conditions}
+\begin{frame}{Aim 1: Plant Growth Under Dynamic Growth Conditions}
   \begin{itemize}
     \item A QTL mapping set; Col, Cvi, Ler Ecotypes%; photo-inhibition mutants
     \item Over 1200 plants planted
@@ -293,7 +300,7 @@
   \end{enumerate}
 \end{frame}
 
-\begin{frame}{How does RNAseq work?}
+\begin{frame}{Aim 2: How does RNAseq work?}
   \begin{columns}[c]
     \begin{column}[c]{0.5\textwidth}
       \begin{figure}[h]
@@ -313,7 +320,7 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{How does RNAseq work?}
+\begin{frame}{Aim 2: How does RNAseq work?}
   \begin{columns}[c]
     \begin{column}[c]{0.5\textwidth}
       \begin{figure}[h]
@@ -335,7 +342,7 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Cheaper, Higher Throughput RNAseq}
+\begin{frame}{Aim 2: Cheaper, Higher Throughput RNAseq}
   \begin{columns}[c]
     \begin{column}[c]{0.5\textwidth}
       \begin{figure}[h]
@@ -358,7 +365,7 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Illumina RNAseq Library Prep.}
+\begin{frame}{Aim 2: Illumina RNAseq Library Prep.}
   \begin{columns}[c]
     \begin{column}[c]{0.5\textwidth}
       \begin{figure}[h]
@@ -395,7 +402,7 @@
 %  \end{figure}
 %\end{frame}
 
-\begin{frame}{RNAseq Analysis Made Easy!}
+\begin{frame}{Aim 2: RNAseq Analysis Made Easy!}
   \begin{columns}[c]
     \begin{column}[c]{0.5\textwidth}
       \begin{figure}[h]
@@ -424,7 +431,7 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{How To Run a Pipeline}
+\begin{frame}{Aim 2: How To Run a Pipeline}
   \begin{columns}[c]
     \begin{column}[c]{0.5\textwidth}
       \begin{exampleblock}{Command:}
@@ -450,7 +457,7 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{How does that work?}
+\begin{frame}{Aim 2: How does that work?}
   \begin{columns}[c]
     \begin{column}[c]{0.5\textwidth}
       \begin{figure}[h]
@@ -473,7 +480,7 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{RNAseq Pipeline Components}
+\begin{frame}{Aim 2: RNAseq Pipeline Components}
 %  \begin{columns}[c]
 %    \begin{column}[c]{0.5\textwidth}
       \begin{figure}[h]
@@ -495,7 +502,7 @@
 %  \end{columns}
 \end{frame}
 
-\begin{frame}{Effect of Sequencing Depth}
+\begin{frame}{Aim 2: Effect of Sequencing Depth}
 %  \begin{columns}[c]
 %    \begin{column}[c]{0.5\textwidth}
       \begin{itemize}
@@ -512,7 +519,7 @@
 %    \begin{column}[c]{0.5\textwidth}
       \begin{figure}[h]
         \begin{center}
-          \includegraphics[width=0.55\textwidth]{img/coverage.png}
+          \includegraphics[width=0.55\textwidth]{img/coverage.pdf}
         \end{center}
         \label{fig:htop}
       \end{figure}
@@ -521,7 +528,7 @@
 \end{frame}
 
 
-%%%%%%%%%%%%%%%%%%%%%% Aim 4 %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% Aim 3 %%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{Aims}
   \begin{enumerate}
@@ -535,38 +542,39 @@
   \end{enumerate}
 \end{frame}
 
-\begin{frame}{Illumina RNAseq Library Prep.}
-  \begin{columns}[c]
-    \begin{column}[c]{0.5\textwidth}
+\begin{frame}{Aim 3: Overview}
+%  \begin{columns}[c]
+%    \begin{column}[c]{0.5\textwidth}
       \begin{figure}[h]
         \begin{center}
-          \includegraphics[width=\textwidth]{img/libraryPrepFD.png}
+          \includegraphics[width=\textwidth]{img/aim3IntroFD.png}
         \end{center}
         \label{fig:libprepfd}
       \end{figure}
-    \end{column}
-    \begin{column}[c]{0.5\textwidth}
-      \begin{itemize}
-        \item 3-5 day protocol
-        \item Up to 12 samples per lane
-        \item \$240-400 per sample
-      \end{itemize}
-      \begin{figure}[h]
-        \begin{center}
-          \includegraphics[width=\textwidth]{img/gels.png}
-        \end{center}
-        \label{fig:gels}
-      \end{figure}
-    \end{column}
-  \end{columns}
+%    \end{column}
+%    \begin{column}[c]{0.5\textwidth}
+%      \begin{itemize}
+%        \item 3-5 day protocol
+%        \item Up to 12 samples per lane
+%        \item \$240-400 per sample
+%      \end{itemize}
+%      \begin{figure}[h]
+%        \begin{center}
+%          \includegraphics[width=\textwidth]{img/gels.png}
+%        \end{center}
+%        \label{fig:gels}
+%      \end{figure}
+%    \end{column}
+%  \end{columns}
 \end{frame}
 
-\begin{frame}{qPCR analysis tells a small story}
+\begin{frame}{Aim 3: qPCR analysis tells a small story}
   \begin{columns}[c]
     \begin{column}[c]{0.5\textwidth}
       \begin{itemize}
-        \item Examine expression of known excess light responsive genes
-        \item Show reduced induction and increased steady state expression
+        \item Examine expression of known excess light responsive genes (APX2, ELIP1, ELIP2,
+          LHCB1.4)
+        \item Dynamic growth conditions show reduced induction and increased steady state expression
         \item Hypotheses appear mostly correct
       \end{itemize}
     \end{column}
@@ -589,7 +597,7 @@
     \begin{column}[c]{0.5\textwidth}
       \begin{figure}[h]
         \begin{center}
-          \includegraphics[width=\textwidth]{img/317bcv.png}
+          \includegraphics[width=\textwidth]{img/317bcv.pdf}
         \end{center}
         \label{fig:htop}
       \end{figure}
@@ -597,8 +605,8 @@
     \begin{column}[c]{0.5\textwidth}
       \begin{figure}[h]
         \begin{center}
-          \includegraphics[width=\textwidth]{img/kmbcv.png}
-          %\includegraphics[width=\textwidth]{img/km317bcv.png}
+          %\includegraphics[width=\textwidth]{img/kmbcv.pdf}
+          \includegraphics[width=\textwidth]{img/km317bcv.pdf}
         \end{center}
         \label{fig:htop}
       \end{figure}
@@ -612,7 +620,7 @@
   \end{itemize}
   \begin{figure}[h]
     \begin{center}
-      \includegraphics[width=0.8\textwidth]{img/km317mds.png}
+      \includegraphics[width=0.7\textwidth]{img/km317mds.pdf}
     \end{center}
     \label{fig:km317mds}
   \end{figure}
@@ -620,53 +628,83 @@
 
 \begin{frame}{RNAseq shows the whole picture}
   \begin{itemize}
-    \item Less differential expression than expected
+    \item Amongst a noisy response, a pattern emerges
+    \item Plants grown in dynamic condition still exibit stress response
+  \end{itemize}
+  \begin{figure}[h]
+    \begin{center}
+      \includegraphics[width=0.65\textwidth]{img/km317mdsAnnot.png}
+    \end{center}
+    \label{fig:km317mds}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{RNAseq shows the whole picture}
+  \begin{itemize}
+    \item Less differential expression in more ``hardened'' conditions
   \end{itemize}
   \begin{columns}[c]
     \begin{column}[c]{0.5\textwidth}
       \begin{figure}[h]
         \begin{center}
-          \includegraphics[width=\textwidth]{img/317petesmear.png}
+          \includegraphics[width=\textwidth]{img/km317flusmear.pdf}
         \end{center}
-        \label{fig:pete}
+        \label{fig:flusmear}
       \end{figure}
+      \begin{itemize}
+        \item 343 up, 229 down
+      \end{itemize}
     \end{column}
     \begin{column}[c]{0.5\textwidth}
       \begin{figure}[h]
         \begin{center}
-          \includegraphics[width=\textwidth]{img/km317sufsmear.png}
+          \includegraphics[width=\textwidth]{img/km317sufsmear.pdf}
         \end{center}
         \label{fig:suf}
       \end{figure}
+      \begin{itemize}
+        \item 666 up, 227 down
+      \end{itemize}
     \end{column}
   \end{columns}
 \end{frame}
 
-\begin{frame}{DE table}
-  \begin{itemize}
-    \item This is how many genes are DE
-    \item This is what they have in common
-    \item Analysis/interpretation is ongoing - (GSEA)
-  \end{itemize}
-\end{frame}
+%\begin{frame}{DE table}
+%  \begin{itemize}
+%    \item This is how many genes are DE
+%    \item This is what they have in common
+%    \item Analysis/interpretation is ongoing - (GSEA)
+%  \end{itemize}
+%\end{frame}
 
 %%%%%%%%%%%%%%% conclusions %%%%%%%%%%%%%%%%%%%
-
 \begin{frame}{Conclusions}
-  \begin{itemize}
-    \item Dynamic growth conditions give interesting biology
-    \item Patterns of differential expression seen, more replicates needed
-    \item RNAseq is here, and easier than you might think
-  \end{itemize}
+  \begin{enumerate}
+    \item Design \& implement dynamic growth conditions
+      \begin{itemize}
+        \item \textit{Dynamic growth conditions may allow stress ``hardening''}
+      \end{itemize}
+    \item Develop improved bioinformatic and molecular protocols for High-throughput RNAseq experiments
+      \begin{itemize}
+        \item \textit{RNAseq is here, and easier than you might think}
+      \end{itemize}
+    \item Determine effect of light intensity on transcriptome under dynamic light
+      conditions
+      \begin{itemize}
+        \item \textit{Patterns of differential expression seen, more replicates needed, analysis
+          ongoing}
+      \end{itemize}
+  \end{enumerate}
 \end{frame}
 
 \begin{frame}{Future Work}
   \begin{itemize}
-    \item Optimise 96-well RNAseq protocol
+    \item Optimise 96-well RNAseq protocol - required for expression QTL mapping
     \item Analyse QTL mapping set:
       \begin{itemize}
-        \item RNAseq to map QTLs for expression of stress responsive genes
-        \item Find phenomic traits e.g. anthocyanin accumulation
+        \item RNAseq to map expression QTLs of stress responsive genes
+        \item Map QTLs for phenomic traits e.g. anthocyanin accumulation - preliminary data looks
+          interesting
       \end{itemize}
     \item Repeat entire experiment with improved sampling techniques - increase statistical power
   \end{itemize}
@@ -676,6 +714,7 @@
   \begin{itemize}
     \item Pogson Lab
     \item Borevitz lab
+    \item Special thanks to Pete Crisp and Norman Warthmann
   \end{itemize}
 \end{frame}
 
