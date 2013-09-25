@@ -47,8 +47,7 @@
   \begin{columns}[c]
     \begin{column}[c]{0.65\textwidth}
       \begin{itemize}
-        \item Plants experience abiotic stress %almost constantly
-          in nature
+        \item Plants experience abiotic stress in nature
         \item Plants exhibit natural variation in stress tolerance
         \item Studying natural variation can give clues to mechanism
         \item Matching natural variation to dynamic conditions may uncover cryptic phenotypes
@@ -67,14 +66,6 @@
       \end{figure}
     \end{column}
   \end{columns}
-%  \begin{itemize}
-%    \item A set of broad hypotheses:
-%      \begin{itemize}
-%        \item In nature, plants acclimate to repeated stresses
-%        \item After acclimation, plants will be more tolerant to stresses
-%        \item We can recreate this acclimation in lab using dynamic growth conditions
-%      \end{itemize}
-%  \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%% Overview %%%%%%%%%%%%%%%%%%%%%%
@@ -88,32 +79,12 @@
   \end{itemize}
 \end{frame}
 
-%\begin{frame}{Investigating altered light intensity}
-%  \begin{itemize}
-%    \item Hypothesised ``hardening'' of plants to harsher conditions
-%      \begin{itemize}
-%        \item Increased steady state expression of stress genes
-%        \item Decreased induction of stress genes after stress
-%      \end{itemize}
-%    \item Hypothesised a relative order of ``hardening''
-%      \begin{enumerate}
-%        \item Fluctuating light
-%        \item Excess light
-%        \item Sufficient light
-%        \item Standard growth conditions
-%      \end{enumerate}
-%  \end{itemize}
-%\end{frame}
-
 %%%%%%%%%%%%%% Aim 1 %%%%%%%%%%%%%%%%%
 
 \begin{frame}{Aims}
   \begin{enumerate}
     \item \textcolor{red}{Design \& implement dynamic growth conditions}
     \item Develop improved bioinformatic and molecular protocols for High-throughput RNAseq experiments
-%    \item Develop a pipeline of software to analyse RNAseq datasets
-%    \item Generate phenomic and transcriptomic QTL mapping datasets from plants grown under dynamic
-%      light conditions
     \item Determine effect of light intensity on transcriptome under dynamic light conditions
   \end{enumerate}
 \end{frame}
@@ -203,14 +174,6 @@
         \end{center}
         \label{fig:cable}
       \end{figure}
-%      \includemedia[
-%        label=spcvid,
-%        width=\textwidth,
-%        addresource=img/conviron.mp4,
-%        flashvars={source=img/conviron.mp4}
-%        ]
-%      {\includegraphics[width=\textwidth]{img/spc.jpg}}
-%      {VPlayer.swf}
     \end{column}
   \end{columns}
 \end{frame}
@@ -253,10 +216,10 @@
 
 \begin{frame}{Aim 1: Plant Growth Under Dynamic Growth Conditions}
   \begin{itemize}
-    \item A QTL mapping set; Col, Cvi, Ler Ecotypes%; photo-inhibition mutants
+    \item A QTL mapping set; Col, Cvi, Ler Ecotypes
     \item Over 1200 plants planted
     \item Grown for 3 weeks dynamic growth conditions
-    \item Assay expression before and after high light pulse treatment% at 5 weeks
+    \item Assay expression before and after high light pulse treatment
   \end{itemize}
   \begin{figure}[h]
     \begin{center}
@@ -264,26 +227,6 @@
     \end{center}
     \label{fig:fullchamber}
   \end{figure}
-%  \begin{columns}[c]
-%    \begin{column}[c]{0.5\textwidth}
-%      \begin{figure}[h]
-%        \begin{center}
-%          \includegraphics[width=0.7\textwidth]{img/Col0_4-P081-007.jpg}
-%        \end{center}
-%        \caption{Sufficient Light}
-%        \label{fig:plant1}
-%      \end{figure}
-%    \end{column}
-%    \begin{column}[c]{0.5\textwidth}
-%      \begin{figure}[h]
-%        \begin{center}
-%          \includegraphics[width=0.7\textwidth]{img/Col0_5-P079-007.jpg}
-%        \end{center}
-%        \caption{Excess Light}
-%        \label{fig:plant2}
-%      \end{figure}
-%    \end{column}
-%  \end{columns}
 \end{frame}
 
 
@@ -293,9 +236,6 @@
   \begin{enumerate}
     \item Design \& implement dynamic growth conditions
     \item \textcolor{red}{Develop improved bioinformatic and molecular protocols for High-throughput RNAseq experiments}
-%    \item Develop a pipeline of software to analyse RNAseq datasets
-%    \item Generate phenomic and transcriptomic QTL mapping datasets from plants grown under dynamic
-%      light conditions
     \item Determine effect of light intensity on transcriptome under dynamic light conditions
   \end{enumerate}
 \end{frame}
@@ -391,17 +331,6 @@
   \end{columns}
 \end{frame}
 
-%\begin{frame}{What's a pipeline?}
-%  \begin{itemize}
-%    \item A collection of software to turn raw data into results
-%  \end{itemize}
-%  \begin{figure}[h]
-%    \begin{center}
-%      \includegraphics[width=0.7\textwidth]{img/pipes.jpg}
-%    \end{center}
-%  \end{figure}
-%\end{frame}
-
 \begin{frame}{Aim 2: RNAseq Analysis Made Easy!}
   \begin{columns}[c]
     \begin{column}[c]{0.5\textwidth}
@@ -417,9 +346,6 @@
       \begin{quote}
         ``Can't there just be a 'do my bioinformatics' button?''
       \end{quote}
-%      \begin{quote}
-%        Well, we laughed at you Chris, but its now \textbf{almost} that easy!
-%      \end{quote}
       \pause
       \begin{figure}[h]
         \begin{center}
@@ -481,50 +407,25 @@
 \end{frame}
 
 \begin{frame}{Aim 2: RNAseq Pipeline Components}
-%  \begin{columns}[c]
-%    \begin{column}[c]{0.5\textwidth}
       \begin{figure}[h]
         \begin{center}
           \includegraphics[width=\textwidth]{img/informaticsFDProgs.png}
         \end{center}
         \label{fig:infofd}
       \end{figure}
-%    \end{column}
-%    \begin{column}[c]{0.5\textwidth}
-%      \begin{enumerate}
-%        \item \texttt{fastqc}
-%        \item \texttt{scythe}, \texttt{seqtk}
-%        \item \texttt{subread} (\texttt{tophat}, \texttt{subjunc})
-%        \item \texttt{featureCounts}
-%        \item \texttt{edgeR} (\texttt{DESeq}, \texttt{cuffdiff})
-%      \end{enumerate}
-%    \end{column}
-%  \end{columns}
 \end{frame}
 
 \begin{frame}{Aim 2: Effect of Sequencing Depth}
-%  \begin{columns}[c]
-%    \begin{column}[c]{0.5\textwidth}
-      \begin{itemize}
-        \item Trade off between multiplexing and statistical power
-        \item Conclusion: Recommend 48x multiplexing (5M reads)
-%        \item Coverage depth a limiting factor in RNAseq
-%        \item Aimed to empirically determine ``cutoff'' depth for our study system
-%        \item Hypothesised that 2 million reads gives 20\% reduction in power
-%        \item 2 million reads gives $\approx$ 50\% reduction
-%        \item Conclusion: use $>$ 2M reads per lane
-      \end{itemize}
-%    \end{column}
-%    \pause
-%    \begin{column}[c]{0.5\textwidth}
-      \begin{figure}[h]
-        \begin{center}
-          \includegraphics[width=0.55\textwidth]{img/coverage.pdf}
-        \end{center}
-        \label{fig:htop}
-      \end{figure}
-%    \end{column}
-%  \end{columns}
+  \begin{itemize}
+    \item Trade off between multiplexing and statistical power
+    \item Conclusion: Recommend 48x multiplexing (5M reads)
+  \end{itemize}
+  \begin{figure}[h]
+    \begin{center}
+      \includegraphics[width=0.55\textwidth]{img/coverage.pdf}
+    \end{center}
+    \label{fig:htop}
+  \end{figure}
 \end{frame}
 
 
@@ -534,38 +435,18 @@
   \begin{enumerate}
     \item Design \& implement dynamic growth conditions
     \item Develop improved bioinformatic and molecular protocols for High-throughput RNAseq experiments
-%    \item Develop a pipeline of software to analyse RNAseq datasets
-%    \item Generate phenomic and transcriptomic QTL mapping datasets from plants grown under dynamic
-%      light conditions
     \item \textcolor{red}{Determine effect of light intensity on transcriptome under dynamic light
       conditions}
   \end{enumerate}
 \end{frame}
 
 \begin{frame}{Aim 3: Overview}
-%  \begin{columns}[c]
-%    \begin{column}[c]{0.5\textwidth}
-      \begin{figure}[h]
-        \begin{center}
-          \includegraphics[width=\textwidth]{img/aim3IntroFD.png}
-        \end{center}
-        \label{fig:libprepfd}
-      \end{figure}
-%    \end{column}
-%    \begin{column}[c]{0.5\textwidth}
-%      \begin{itemize}
-%        \item 3-5 day protocol
-%        \item Up to 12 samples per lane
-%        \item \$240-400 per sample
-%      \end{itemize}
-%      \begin{figure}[h]
-%        \begin{center}
-%          \includegraphics[width=\textwidth]{img/gels.png}
-%        \end{center}
-%        \label{fig:gels}
-%      \end{figure}
-%    \end{column}
-%  \end{columns}
+  \begin{figure}[h]
+    \begin{center}
+      \includegraphics[width=\textwidth]{img/aim3IntroFD.png}
+    \end{center}
+    \label{fig:libprepfd}
+  \end{figure}
 \end{frame}
 
 \begin{frame}{Aim 3: qPCR analysis tells a small story}
@@ -605,7 +486,6 @@
     \begin{column}[c]{0.5\textwidth}
       \begin{figure}[h]
         \begin{center}
-          %\includegraphics[width=\textwidth]{img/kmbcv.pdf}
           \includegraphics[width=\textwidth]{img/km317bcv.pdf}
         \end{center}
         \label{fig:htop}
@@ -669,14 +549,6 @@
   \end{columns}
 \end{frame}
 
-%\begin{frame}{DE table}
-%  \begin{itemize}
-%    \item This is how many genes are DE
-%    \item This is what they have in common
-%    \item Analysis/interpretation is ongoing - (GSEA)
-%  \end{itemize}
-%\end{frame}
-
 %%%%%%%%%%%%%%% conclusions %%%%%%%%%%%%%%%%%%%
 \begin{frame}{Conclusions}
   \begin{enumerate}
@@ -718,164 +590,4 @@
   \end{itemize}
 \end{frame}
 
-%%%%%%%%%%%%%%%%% extras %%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%% old / dead slides
-
-\begin{frame}{Old/Dead slides}
-\end{frame}
-
-\begin{frame}{Project Overview}
-  \begin{itemize}
-    \item What I've spent my year doing:
-      \pause
-    \item Create \& implement ``dynamic growth conditions''
-      \pause
-    \item Study plant growth under these conditions
-      \pause
-    \item Design \& implement data analysis pipeline for RNAseq
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Light Quantity}
-  \begin{itemize}
-    \item Plants need a ``happy medium'' of light
-    \item Too little = sub-optimal growth
-    \item Too much = photooxidative damage
-    \item Interesting model system for examining dynamic growth conditions
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Light Response \& Transcriptomics}
-  \begin{itemize}
-    \item Excess light invokes known transcriptional response
-    \item Many genes induced in excess light constitutively expressed in field
-    \item Transcriptomics sensitive to subtle or fast changes
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{History of Light Transcriptomics}
-  \begin{itemize}
-    \item Pogson, Nagashi, Karpinski, Jannsen
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Aims}
-  \begin{enumerate}
-    \item Develop a pipeline of software to analyse RNAseq datasets
-    \pause
-    \item Determine the response of \textit{Arabidopsis thaliana} to altered light intensity under
-      dynamic growth conditions
-  \end{enumerate}
-\end{frame}
-
-\begin{frame}[t]{Making a pipeline?}
-  \begin{figure}[h]
-    \begin{center}
-      \includegraphics[width=0.7\textwidth]{img/pipelineMaking1.png}
-    \end{center}
-    \label{fig:makepipe1}
-  \end{figure}
-\end{frame}
-
-\begin{frame}[t]{Making a pipeline?}
-  \begin{figure}[h]
-    \begin{center}
-      \includegraphics[width=0.7\textwidth]{img/pipelineMaking2.png}
-    \end{center}
-    \label{fig:makepipe2}
-  \end{figure}
-\end{frame}
-
-\begin{frame}{Aim 1}
-  \emph{Develop a pipeline of software to analyse RNAseq datasets}
-  \pause
-  \begin{itemize}
-    \item Define \& overcome shortcomings in existing analysis pipelines
-    \item Experimentally define limitations of RNAseq experimental designs
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Steps in an RNAseq Analysis}
-  \begin{itemize}
-    \item Raw sequence data needs to be:
-      \begin{itemize}
-        \item Filtered for quality
-        \item Aligned to the genome
-      \end{itemize}
-    \pause
-    \item Once aligned, one needs to:
-      \begin{itemize}
-        \item Quantify gene expression
-        \item Normalise counts
-        \item Perform statistical tests
-      \end{itemize}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Existing ``Best Practice'' Pipeline}
-  \begin{columns}[c]
-    \begin{column}[c]{0.5\textwidth}
-      \begin{itemize}
-        \item Settings optimised for non plants
-        \item Not optimised for large/dramatic changes
-        \item Result in hypothesised weird artefacts
-        \item Can result in false positives or false negatives
-      \end{itemize}
-    \end{column}
-    \pause
-    \begin{column}[c]{0.5\textwidth}
-      \begin{figure}[h]
-        \begin{center}
-          \includegraphics[width=\textwidth]{img/timecourseBump.png}
-        \end{center}
-        \label{fig:tcbump}
-      \end{figure}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}{``Improved'' plot}
-  \begin{columns}[c]
-    \begin{column}[c]{0.5\textwidth}
-      \begin{itemize}
-        \item Using \texttt{edgeR}, state of the art statistics
-        \item Hypothesis was artefacts would be removed
-      \end{itemize}
-    \end{column}
-    \pause
-    \begin{column}[c]{0.5\textwidth}
-      \begin{figure}[h]
-        \begin{center}
-          \includegraphics[width=\textwidth]{img/nobump.png}
-        \end{center}
-        \label{fig:htop}
-      \end{figure}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}{Venn Diagrams}
-  \begin{itemize}
-    \item Hard to see, but there is most overlap between Sufficient and Control, and Sufficient and
-      Fluctuating
-  \end{itemize}
-  \begin{figure}[h]
-    \begin{center}
-      \includegraphics[width=0.6\textwidth]{img/venn.png}
-    \end{center}
-    \label{fig:venn}
-  \end{figure}
-\end{frame}
-
-\begin{frame}{QTL mapping aims}
-  \begin{itemize}
-    \item Look for loci which control transcriptional response to abiotic stress
-  \end{itemize}
-\end{frame}
-
-
-%        \item $K \propto [mRNA]$
 \end{document}
