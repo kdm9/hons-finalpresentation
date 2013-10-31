@@ -26,7 +26,7 @@
 
 % Title page
 \title{Transcriptome Variation in \textit{Arabidopsis} Under Dynamic Growth Conditions}
-\subtitle{or: How I learned to stop worrying and love RNAseq}
+%\subtitle{or: How I learned to stop worrying and love RNAseq}
 \author{Kevin Murray}
 \institute{Borevitz and Pogson Labs}
 \date{\today}
@@ -159,6 +159,7 @@
             \item 134 minor, 16 major versions
             \item Open source, on \texttt{github.com}
           \end{itemize}
+        \item Allow minute-wise control of all components
       \end{itemize}
     \end{column}
     \begin{column}[c]{0.5\textwidth}
@@ -282,54 +283,54 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Aim 2: Cheaper, Higher Throughput RNAseq}
-  \begin{columns}[c]
-    \begin{column}[c]{0.5\textwidth}
-      \begin{figure}[h]
-        \begin{center}
-          \includegraphics[width=\textwidth]{img/libraryPrepFD.png}
-        \end{center}
-        \label{fig:libprepfd}
-      \end{figure}
-    \end{column}
-    \begin{column}[c]{0.5\textwidth}
-      \begin{itemize}
-        \item Adapted from \textcite{kumar_high-throughput_2012}
-        \item On-bead SPRI protocol
-        \item Performed in 96 well plate
-        \item $\approx$ \$50 per sample, 96 samples per lane
-        \item Successful until final step
-        \item Sidelined due to lack of time
-      \end{itemize}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}{Aim 2: Illumina RNAseq Library Prep.}
-  \begin{columns}[c]
-    \begin{column}[c]{0.5\textwidth}
-      \begin{figure}[h]
-        \begin{center}
-          \includegraphics[width=\textwidth]{img/libraryPrepIlluminaFD.png}
-        \end{center}
-        \label{fig:libprepfd}
-      \end{figure}
-    \end{column}
-    \begin{column}[c]{0.5\textwidth}
-      \begin{itemize}
-        \item 3-5 day protocol
-        \item Up to 12 samples per lane
-        \item \$240-400 per sample
-      \end{itemize}
-      \begin{figure}[h]
-        \begin{center}
-          \includegraphics[width=\textwidth]{img/gels.png}
-        \end{center}
-        \label{fig:gels}
-      \end{figure}
-    \end{column}
-  \end{columns}
-\end{frame}
+%\begin{frame}{Aim 2: Cheaper, Higher Throughput RNAseq}
+%  \begin{columns}[c]
+%    \begin{column}[c]{0.5\textwidth}
+%      \begin{figure}[h]
+%        \begin{center}
+%          \includegraphics[width=\textwidth]{img/libraryPrepFD.png}
+%        \end{center}
+%        \label{fig:libprepfd}
+%      \end{figure}
+%    \end{column}
+%    \begin{column}[c]{0.5\textwidth}
+%      \begin{itemize}
+%        \item Adapted from \textcite{kumar_high-throughput_2012}
+%        \item On-bead SPRI protocol
+%        \item Performed in 96 well plate
+%        \item $\approx$ \$50 per sample, 96 samples per lane
+%        \item Successful until final step
+%        \item Sidelined due to lack of time
+%      \end{itemize}
+%    \end{column}
+%  \end{columns}
+%\end{frame}
+%
+%\begin{frame}{Aim 2: Illumina RNAseq Library Prep.}
+%  \begin{columns}[c]
+%    \begin{column}[c]{0.5\textwidth}
+%      \begin{figure}[h]
+%        \begin{center}
+%          \includegraphics[width=\textwidth]{img/libraryPrepIlluminaFD.png}
+%        \end{center}
+%        \label{fig:libprepfd}
+%      \end{figure}
+%    \end{column}
+%    \begin{column}[c]{0.5\textwidth}
+%      \begin{itemize}
+%        \item 3-5 day protocol
+%        \item Up to 12 samples per lane
+%        \item \$240-400 per sample
+%      \end{itemize}
+%      \begin{figure}[h]
+%        \begin{center}
+%          \includegraphics[width=\textwidth]{img/gels.png}
+%        \end{center}
+%        \label{fig:gels}
+%      \end{figure}
+%    \end{column}
+%  \end{columns}
+%\end{frame}
 
 \begin{frame}{Aim 2: RNAseq Analysis Made Easy!}
   \begin{columns}[c]
@@ -378,6 +379,7 @@
             \item \mint{sh}|keyfile.key| Give it the ``keyfile''
           \end{itemize}
         \item No need to run each component separately
+        \item Automatically logs exact commands
       \end{itemize}
     \end{column}
   \end{columns}
@@ -395,24 +397,31 @@
     \end{column}
     \begin{column}[c]{0.5\textwidth}
       \begin{itemize}
-        \item More than 1300 lines of code
         \item Written in bash, python and R
-        \item 144 minor versions
+        \item $>$ 2500 lines of code, $>$ 200 commits
         \item Code is on \texttt{github.com}
         \item Open source (GPL v3)
-        \item You should use it!
+        \item Pilfer at will!
       \end{itemize}
     \end{column}
   \end{columns}
 \end{frame}
 
 \begin{frame}{Aim 2: RNAseq Pipeline Components}
-      \begin{figure}[h]
-        \begin{center}
-          \includegraphics[width=\textwidth]{img/informaticsFDProgs.png}
-        \end{center}
-        \label{fig:infofd}
-      \end{figure}
+  \begin{figure}[h]
+    \begin{center}
+      \includegraphics[width=\textwidth]{img/informaticsFDProgs.png}
+    \end{center}
+    \label{fig:infofd}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Aim 2: Pipeline Performance}
+  \begin{figure}[h]
+    \begin{center}
+      \includegraphics[width=\textwidth]{img/pltimes.pdf}
+    \end{center}
+  \end{figure}
 \end{frame}
 
 \begin{frame}{Aim 2: Effect of Sequencing Depth}
@@ -440,14 +449,14 @@
   \end{enumerate}
 \end{frame}
 
-\begin{frame}{Aim 3: Overview}
-  \begin{figure}[h]
-    \begin{center}
-      \includegraphics[width=\textwidth]{img/aim3IntroFD.png}
-    \end{center}
-    \label{fig:libprepfd}
-  \end{figure}
-\end{frame}
+%\begin{frame}{Aim 3: Overview}
+%  \begin{figure}[h]
+%    \begin{center}
+%      \includegraphics[width=\textwidth]{img/aim3IntroFD.png}
+%    \end{center}
+%    \label{fig:libprepfd}
+%  \end{figure}
+%\end{frame}
 
 \begin{frame}{Aim 3: qPCR analysis tells a small story}
   \begin{columns}[c]
@@ -554,7 +563,7 @@
   \begin{enumerate}
     \item Design \& implement dynamic growth conditions
       \begin{itemize}
-        \item \textit{Dynamic growth conditions may allow stress ``hardening''}
+        \item \textit{Dynamic growth conditions may allow stress hardening}
       \end{itemize}
     \item Develop improved bioinformatic and molecular protocols for High-throughput RNAseq experiments
       \begin{itemize}
@@ -563,8 +572,7 @@
     \item Determine effect of light intensity on transcriptome under dynamic light
       conditions
       \begin{itemize}
-        \item \textit{Patterns of differential expression seen, more replicates needed, analysis
-          ongoing}
+        \item \textit{Patterns of differential expression seen, more replicates needed, analysis ongoing}
       \end{itemize}
   \end{enumerate}
 \end{frame}
@@ -584,9 +592,9 @@
 
 \begin{frame}{Acknowledgements}
   \begin{itemize}
-    \item Pogson Lab
-    \item Borevitz lab
-    \item Special thanks to Pete Crisp and Norman Warthmann
+    \item Pogson and Borevitz labs
+    \item Pete Crisp and Norman Warthmann
+    \item The GDU and associates
   \end{itemize}
 \end{frame}
 
